@@ -5,39 +5,106 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Santhoshini Thanniru Portfolio</title>
 <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f0f2f5; color:#333; }
-    header { background:#4e73df; color:white; text-align:center; padding:50px 20px; }
-    header img { width:150px; height:150px; border-radius:50%; border:4px solid white; object-fit:cover; margin-bottom:20px; }
-    header h1 { font-size:2.5em; margin-bottom:10px; }
-    header h3 { font-weight:normal; margin-bottom:20px; }
-    header .btn { display:inline-block; padding:10px 20px; margin:5px; background:#2e59d9; color:white; border-radius:25px; transition:0.3s; }
-    header .btn:hover { background:#1b3bb8; }
-    section { max-width:900px; margin:auto; padding:50px 20px; }
-    section h2 { text-align:center; color:#4e73df; margin-bottom:30px; }
-    ul { list-style:none; padding:0; }
-    ul li { background:white; margin:10px 0; padding:15px 20px; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
-    .skills-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:15px; }
-    .skill { background:#4e73df; color:white; padding:20px; border-radius:10px; text-align:center; font-weight:bold; }
-    footer { text-align:center; padding:20px; background:#2e59d9; color:white; }
-    #contact .btn { margin:5px; }
+    /* GENERAL STYLES */
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(120deg, #fdfbfb, #ebedee);
+        color: #333;
+    }
+    a { text-decoration: none; }
+    h1, h2, h3 { margin: 0.5em 0; }
+    
+    /* HEADER */
+    header {
+        background: linear-gradient(135deg, #4e73df, #2e59d9);
+        color: white;
+        text-align: center;
+        padding: 60px 20px;
+    }
+    header img {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        border: 4px solid white;
+        object-fit: cover;
+        margin-bottom: 20px;
+    }
+    header h1 { font-size: 2.5em; margin-bottom: 10px; }
+    header h3 { font-weight: 400; margin-bottom: 20px; }
+    header p { max-width: 600px; margin: 0 auto 20px auto; }
+    .btn {
+        display: inline-block;
+        padding: 12px 25px;
+        margin: 5px;
+        border-radius: 25px;
+        background-color: #f6c23e;
+        color: #2e2e2e;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+    .btn:hover { background-color: #dda20a; color: white; }
+
+    /* SECTIONS */
+    section { max-width: 900px; margin: auto; padding: 50px 20px; }
+    section h2 { text-align: center; color: #4e73df; margin-bottom: 30px; }
+
+    /* LISTS */
+    ul { list-style: none; padding: 0; }
+    ul li {
+        background: white;
+        margin: 10px 0;
+        padding: 15px 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    /* SKILLS GRID */
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 15px;
+    }
+    .skill {
+        background: #4e73df;
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+    .skill:hover { transform: scale(1.05); }
+
+    /* FOOTER */
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: #2e59d9;
+        color: white;
+    }
 </style>
 </head>
 <body>
 
+<!-- HEADER -->
 <header>
-    <img src="https://github.com/santhoshini2530/myportfolio/blob/main/WhatsApp%20Image%202025-12-04%20at%204.34.17%20PM.jpeg" alt="Santhoshini Thanniru">
+    <img src="https://github.com/santhoshini2530/myportfolio/raw/main/profile.jpg" alt="Santhoshini Thanniru">
     <h1>SANTHOSHINI THANNIRU</h1>
-    <h3>CERTIFICATE IN AI & DATA ANALYTICS</h3>
-    <p>Looking for a role in data analytics where I can apply my skills to support business decisions and contribute to company growth.</p>
+    <h3>Certificate in AI & Data Analytics</h3>
+    <p>Looking for a role in data analytics where I can apply my skills to support business decisions and contribute to company growth. Skilled in SQL, Pandas, Excel, and data visualization.</p>
     <a href="https://linkedin.com/in/santhoshini-thanniru" class="btn">LinkedIn</a>
     <a href="https://github.com/santhoshini-thanniru-Portfolio" class="btn">GitHub</a>
+    <a href="mailto:santhoshini.thanniru@gmail.com" class="btn">Email</a>
 </header>
 
+<!-- CAREER OBJECTIVE -->
 <section id="career-objective">
     <h2>Career Objective</h2>
     <p>Looking for a role in data analytics where I can apply my skills to support business decisions and contribute to company growth. Skilled in SQL, Pandas, Excel, and data visualization, with a strong interest in learning and growing within the organization.</p>
 </section>
 
+<!-- STRENGTHS -->
 <section id="strengths">
     <h2>Strengths</h2>
     <ul>
@@ -48,8 +115,9 @@
     </ul>
 </section>
 
+<!-- TECHNICAL SKILLS -->
 <section id="skills">
-    <h2>Technical Skills / Expertise</h2>
+    <h2>Technical Skills</h2>
     <div class="skills-grid">
         <div class="skill">Python</div>
         <div class="skill">MySQL</div>
@@ -62,6 +130,7 @@
     </div>
 </section>
 
+<!-- EDUCATION -->
 <section id="education">
     <h2>Educational Qualifications</h2>
     <ul>
@@ -71,19 +140,21 @@
     </ul>
 </section>
 
+<!-- PROJECTS / ACHIEVEMENTS -->
 <section id="achievements">
-    <h2>Achievements / Projects</h2>
+    <h2>Achievements & Projects</h2>
     <ul>
         <li>Certificate in AI Data Analytics - Tech Mahindra SMART Academy, Hyderabad</li>
-        <li>Blood Bank Management System Project
+        <li>Blood Bank Management System
             <ul>
-                <li>Created detailed documentation and structured workflows for a web-based system.</li>
+                <li>Created documentation and structured workflows.</li>
                 <li>Enhanced attention to detail, data organization, and compliance-focused skills.</li>
             </ul>
         </li>
     </ul>
 </section>
 
+<!-- HOBBIES -->
 <section id="hobbies">
     <h2>Hobbies</h2>
     <ul>
@@ -94,12 +165,7 @@
     </ul>
 </section>
 
-<section id="contact">
-    <h2>Contact Me</h2>
-    <a href="mailto:santhoshini.thanniru@gmail.com" class="btn">Email</a>
-    <a href="tel:+919704300462" class="btn">Call</a>
-</section>
-
+<!-- FOOTER -->
 <footer>
     &copy; 2026 Santhoshini Thanniru
 </footer>
