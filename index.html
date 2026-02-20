@@ -10,6 +10,7 @@
 
 html{
 scroll-behavior:smooth;
+scroll-padding-top:100px;
 }
 
 body{
@@ -39,17 +40,44 @@ header{
 margin-top:90px;
 text-align:center;
 padding:60px 20px;
+position:relative;
 }
+
 header img{
 width:220px;
-height:300px;   /* Taller than width */
-border-radius:25px;  /* Smooth corners */
+height:300px;
+border-radius:25px;
 border:4px solid #e30066;
 object-fit:cover;
 margin-bottom:20px;
 box-shadow:0 8px 20px rgba(227,0,102,0.2);
 }
 
+/* RIGHT SIDE BUTTONS */
+.side-buttons{
+position:absolute;
+right:30px;
+top:120px;
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.side-buttons a{
+padding:8px 14px;
+font-size:12px;
+background:#e30066;
+color:white;
+text-decoration:none;
+border-radius:20px;
+transition:0.3s;
+}
+
+.side-buttons a:hover{
+background:#a0004d;
+}
+
+/* HEADINGS */
 header h1{
 font-size:2.6em;
 color:#e30066;
@@ -66,7 +94,7 @@ max-width:600px;
 margin:auto;
 }
 
-/* BUTTONS */
+/* BOUNCY BUTTONS */
 .btn{
 display:inline-block;
 padding:12px 28px;
@@ -76,12 +104,19 @@ background:linear-gradient(135deg,#e30066,#e96088);
 color:white;
 font-weight:600;
 text-decoration:none;
-transition:0.3s;
 box-shadow:0 4px 10px rgba(227,0,102,0.2);
+animation:bounce 2s infinite;
 }
 
 .btn:hover{
-transform:scale(1.08);
+transform:scale(1.1);
+}
+
+/* Bounce Animation */
+@keyframes bounce{
+0%,20%,50%,80%,100% {transform: translateY(0);}
+40% {transform: translateY(-8px);}
+60% {transform: translateY(-4px);}
 }
 
 .download-btn{
@@ -93,11 +128,7 @@ background:linear-gradient(135deg,#e96088,#f19eb1);
 color:white;
 font-weight:600;
 text-decoration:none;
-transition:0.3s;
-}
-
-.download-btn:hover{
-transform:scale(1.08);
+animation:bounce 2s infinite;
 }
 
 /* SECTIONS */
@@ -122,7 +153,7 @@ border-radius:18px;
 box-shadow:0 6px 15px rgba(0,0,0,0.08);
 }
 
-/* PROJECT FULL BOX */
+/* PROJECT BOX */
 .project-box{
 background:white;
 padding:30px;
@@ -194,11 +225,6 @@ background:linear-gradient(135deg,#e30066,#e96088);
 color:white;
 font-weight:600;
 cursor:pointer;
-transition:0.3s;
-}
-
-.contact-box button:hover{
-transform:scale(1.05);
 }
 
 /* FOOTER */
@@ -219,7 +245,20 @@ SANTHOSHINI THANNIRU
 </div>
 
 <header>
+
 <img src="WhatsApp Image 2026-02-20 at 9.18.05 PM.jpeg" alt="Santhoshini">
+
+<!-- RIGHT SIDE NAV BUTTONS -->
+<div class="side-buttons">
+<a href="#career">Career</a>
+<a href="#strengths">Strengths</a>
+<a href="#skills">Skills</a>
+<a href="#education">Education</a>
+<a href="#projects">Projects</a>
+<a href="#hobbies">Hobbies</a>
+<a href="#contact">Contact</a>
+</div>
+
 <h1>SANTHOSHINI THANNIRU</h1>
 <h3>AI & Data Analytics Professional</h3>
 <p>Looking for a role in data analytics to support business decisions and contribute to company growth. Skilled in SQL, Pandas, Excel, and data visualization.</p>
@@ -232,18 +271,17 @@ SANTHOSHINI THANNIRU
 <a href="Santhoshini.thanniru.Formal TechM.pdf" class="download-btn" download>
 Download Resume
 </a>
+
 </header>
 
-<!-- Career Objective -->
-<section>
+<section id="career">
 <h2>Career Objective</h2>
 <div class="card">
 Looking for a role in data analytics where I can apply my skills to support business decisions and contribute to company growth.
 </div>
 </section>
 
-<!-- Strengths -->
-<section>
+<section id="strengths">
 <h2>Strengths</h2>
 <div class="card">Adaptability</div>
 <div class="card">Attention to Detail</div>
@@ -251,8 +289,7 @@ Looking for a role in data analytics where I can apply my skills to support busi
 <div class="card">Effective Communication</div>
 </section>
 
-<!-- Technical Skills -->
-<section>
+<section id="skills">
 <h2>Technical Skills</h2>
 <div class="skills-grid">
 <div class="skill">Python</div>
@@ -263,58 +300,37 @@ Looking for a role in data analytics where I can apply my skills to support busi
 </div>
 </section>
 
-<!-- Education -->
-<section>
+<section id="education">
 <h2>Education</h2>
 <div class="card">2023-2025: M.Sc Computer Science - Bhavans Vivekananda Degree & PG College (83%)</div>
 <div class="card">2020-2023: B.Sc Statistics - Vasundara Women's Degree College (87%)</div>
 <div class="card">2018-2020: M.P.C - Sri Chaitanya Junior College (79%)</div>
 </section>
 
-<!-- Projects -->
-<section>
+<section id="projects">
 <h2>Projects & Achievements</h2>
-
 <div class="project-box">
-
 <h3>AI & Data Analytics Certification - Tech Mahindra SMART Academy</h3>
-<p>
-Completed professional training in SQL, Python, Pandas, Data Visualization, and Power BI.
-Worked on real-time datasets and built analytical dashboards to extract business insights.
-</p>
-
-<hr style="margin:25px 0; border:1px solid #f9d2da;">
-
+<p>Completed professional training in SQL, Python, Pandas, Data Visualization, and Power BI.</p>
+<hr>
 <div class="project-content">
-
 <img src="drop.png" alt="Blood Bank Project">
-
 <div class="project-text">
 <h3>Blood Bank Management System</h3>
-
-<p>
-Developed a database-driven system to efficiently manage donor, patient, and blood inventory records.
-Improved data accuracy and streamlined workflow processes.
-</p>
-
+<p>Developed a database-driven system to manage donor and inventory records efficiently.</p>
 <ul>
 <li>Designed relational database using MySQL</li>
 <li>Managed donor & recipient data</li>
 <li>Implemented blood inventory tracking</li>
 <li>Generated structured reports</li>
-<li>Improved operational efficiency</li>
 </ul>
-
-<p><strong>Technologies Used:</strong> ASP.NET,SQL,HTML</p>
-
+<p><strong>Technologies Used:</strong> ASP.NET, SQL, HTML</p>
 </div>
 </div>
-
 </div>
 </section>
 
-<!-- Hobbies -->
-<section>
+<section id="hobbies">
 <h2>Hobbies</h2>
 <div class="card">Browsing AI & Data Analytics updates online</div>
 <div class="card">Watching movies</div>
@@ -322,24 +338,18 @@ Improved data accuracy and streamlined workflow processes.
 <div class="card">Listening to music</div>
 </section>
 
-<!-- Contact -->
 <section id="contact">
 <h2>Contact Me</h2>
 <div class="contact-box">
-
 <p><strong>Email:</strong> santhoshini.thanniru30@gmail.com</p>
-
 <form action="https://formsubmit.co/santhoshini.thanniru30@gmail.com" method="POST">
 <input type="hidden" name="_captcha" value="false">
 <input type="hidden" name="_subject" value="New Portfolio Message">
-
 <input type="text" name="name" placeholder="Your Name" required>
 <input type="email" name="email" placeholder="Your Email" required>
 <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-
 <button type="submit">Send Message</button>
 </form>
-
 </div>
 </section>
 
