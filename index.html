@@ -52,12 +52,7 @@ object-fit:cover;
 margin-bottom:20px;
 box-shadow:0 8px 20px rgba(227,0,102,0.2);
 }
-/ *.left-design */
-animation: floatLine 4s ease-in-out infinite;
- @keyframes floatLine {
-    0%, 100% { transform: translateY(-50%); }
-    50% { transform: translateY(-55%); }
-}
+
 /* RIGHT SIDE BUTTONS */
 .side-buttons{
 position:absolute;
@@ -82,6 +77,37 @@ transition:0.3s;
 
 .side-buttons a:hover{
 background:#a0004d;
+}
+ /* Left Decorative Lines */
+.left-design {
+    position: fixed;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 250px;
+    background: linear-gradient(to bottom, #ff0066, transparent);
+    border-radius: 10px;
+    opacity: 0.5;
+}
+
+/* Extra thin lines for stylish look */
+.left-design::before,
+.left-design::after {
+    content: "";
+    position: absolute;
+    left: 15px;
+    width: 2px;
+    height: 200px;
+    background: #ff0066;
+    opacity: 0.3;
+    border-radius: 10px;
+}
+
+.left-design::after {
+    left: 30px;
+    height: 150px;
+    opacity: 0.2;
 }
 
 /* HEADINGS */
@@ -277,6 +303,7 @@ SANTHOSHINI THANNIRU
 <a href="#hobbies">Hobbies</a>
 <a href="#contact">Contact</a>
 </div>
+ <div class="left-design"></div>
 
 <h1>SANTHOSHINI THANNIRU</h1>
 <h3>AI & Data Analytics Professional</h3>
