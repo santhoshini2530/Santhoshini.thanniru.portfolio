@@ -60,7 +60,7 @@ right:30px;
 top:120px;
 display:flex;
 flex-direction:column;
-gap:10px;
+gap:15px; 
 animation:bounce 5s infinite;
 }
 
@@ -70,6 +70,7 @@ font-size:12px;
 background:#e30066;
 color:white;
 text-decoration:none;
+box-shadow:0 4px 10px rgba(227,0,102,0.2);
 border-radius:20px;
 transition:0.3s;
 }
@@ -234,6 +235,26 @@ padding:20px;
 background:#e30066;
 color:white;
 margin-top:50px;
+} 
+  /* Elegant Hover Bounce Effect */
+.card,
+.project-box,
+.skill,
+.contact-box {
+
+transition: transform 0.4s ease, box-shadow 0.4s ease;
+cursor: pointer;
+
+}
+
+.card:hover,
+.project-box:hover,
+.skill:hover,
+.contact-box:hover {
+
+transform: translateY(-8px);
+box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+
 }
 </style>
 </head>
