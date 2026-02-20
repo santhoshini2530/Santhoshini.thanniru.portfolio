@@ -80,43 +80,26 @@ background:#a0004d;
 }
 
 
-.left-curve {
+/* Small Curved Decorative Design */
+.curve-design {
     position: fixed;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 120px;
-    opacity: 0.6;
+    top: 90px;        /* slightly below top */
+    left: 80px;       /* not extreme corner */
+    width: 45px;      /* small size (coin-like) */
+    height: 45px;
+    opacity: 0.7;
+    animation: rotateCurve 8s linear infinite;
 }
 
-.left-curve svg {
+.curve-design svg {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
-.left-curve path {
-    fill: none;
-    stroke: #ff0066;
-    stroke-width: 3;
-    stroke-linecap: round;
-
-    /* Drawing animation */
-    stroke-dasharray: 400;
-    stroke-dashoffset: 400;
-    animation: draw 4s ease-in-out infinite;
-}
-
-/* Draw animation */
-@keyframes draw {
-    0% {
-        stroke-dashoffset: 400;
-    }
-    50% {
-        stroke-dashoffset: 0;
-    }
-    100% {
-        stroke-dashoffset: 400;
-    }
+/* Smooth slow rotation */
+@keyframes rotateCurve {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 /* HEADINGS */
 header h1{
@@ -311,9 +294,14 @@ SANTHOSHINI THANNIRU
 <a href="#hobbies">Hobbies</a>
 <a href="#contact">Contact</a>
 </div>
- <div class="left-curve">
-    <svg viewBox="0 0 200 200">
-        <path d="M20 100 Q50 20 80 100 T140 100 T200 100" />
+ < -- Left Design -->
+     <div class="curve-design">
+    <svg viewBox="0 0 100 100">
+        <path d="M10 60 Q 25 20, 40 60 T 70 60 T 100 60"
+              fill="transparent"
+              stroke="#e30066"
+              stroke-width="3"
+              stroke-linecap="round"/>
     </svg>
 </div>
 
