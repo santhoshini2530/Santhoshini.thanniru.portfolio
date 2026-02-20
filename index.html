@@ -8,209 +8,300 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
-html {
-    scroll-behavior: smooth;
+html{
+scroll-behavior:smooth;
 }
 
-body {
-    margin:0;
-    font-family:'Montserrat', sans-serif;
-    background: linear-gradient(135deg, #094782, #3049AD, #6B007B);
-    color:#fff;
+body{
+margin:0;
+font-family:'Montserrat', sans-serif;
+background: linear-gradient(135deg, #094782, #3049AD, #6B007B);
+color:#fff;
+}
+
+/* 🔹 STICKY NAME BAR */
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+background:linear-gradient(90deg,#6B007B,#3049AD);
+padding:15px 0;
+text-align:center;
+font-weight:bold;
+font-size:20px;
+color:white;
+z-index:1000;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
 
 /* HEADER */
-header {
-    background: linear-gradient(135deg, #6B007B, #FEB5DA, #9A64A0);
-    text-align:center;
-    padding:80px 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+header{
+margin-top:70px;
+background: linear-gradient(135deg, #6B007B, #FEB5DA, #9A64A0);
+color:white;
+text-align:center;
+padding:80px 20px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-header img {
-    width:180px;
-    height:180px;
-    border-radius:15px;
-    border:4px solid white;
-    object-fit:cover;
-    margin-bottom:20px;
+header img{
+width:180px;
+height:180px;
+border-radius:15px;
+border:4px solid white;
+object-fit:cover;
+margin-bottom:20px;
 }
 
-header h1 {
-    font-size:3em;
-    margin:10px 0;
+header h1{
+font-size:3em;
+margin:10px 0;
+text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
 }
 
-header p {
-    max-width:600px;
-    margin:auto;
+header h3{
+font-weight:400;
+margin-bottom:15px;
+}
+
+header p{
+max-width:600px;
+margin:auto;
+font-size:1.1em;
 }
 
 /* BUTTONS */
-.btn {
-    display:inline-block;
-    padding:12px 30px;
-    margin:5px;
-    border-radius:25px;
-    background: linear-gradient(135deg,#6B007B,#9A64A0,#FEB5DA);
-    color:white;
-    font-weight:bold;
-    text-decoration:none;
-    transition:0.3s;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+.btn{
+display:inline-block;
+padding:12px 30px;
+margin:5px;
+border-radius:25px;
+background: linear-gradient(135deg,#6B007B,#9A64A0,#FEB5DA);
+color:white;
+font-weight:bold;
+transition:0.3s;
+text-decoration:none;
+box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-.btn:hover {
-    transform:scale(1.1);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+.btn:hover{
+transform:scale(1.1);
+box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
 /* DOWNLOAD BUTTON */
-.download-btn {
-    display:inline-block;
-    margin-top:20px;
-    padding:15px 35px;
-    background: linear-gradient(135deg,#3049AD,#6B007B,#FEB5DA);
-    color:white;
-    border-radius:25px;
-    font-weight:bold;
-    text-decoration:none;
-    transition:0.3s;
+.download-btn{
+display:inline-block;
+margin:20px auto 0 auto;
+padding:15px 35px;
+background: linear-gradient(135deg,#3049AD,#6B007B,#FEB5DA);
+color:white;
+border-radius:25px;
+font-weight:bold;
+text-decoration:none;
+transition:0.3s;
+box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
-.download-btn:hover {
-    transform:scale(1.1);
+.download-btn:hover{
+transform:scale(1.1);
+box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
 
 /* SECTIONS */
-section {
-    max-width:900px;
-    margin:auto;
-    padding:60px 20px;
+section{
+max-width:900px;
+margin:auto;
+padding:60px 20px;
 }
 
-section h2 {
-    text-align:center;
-    color:#FEB5DA;
-    margin-bottom:40px;
+section h2{
+text-align:center;
+color:#FEB5DA;
+margin-bottom:40px;
+font-size:2em;
+text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
 }
 
 /* CARDS */
-.card {
-    background: rgba(255,255,255,0.1);
-    padding:20px;
-    margin:15px 0;
-    border-radius:15px;
-    backdrop-filter: blur(10px);
-    transition:0.3s;
+.card{
+background: rgba(255,255,255,0.1);
+padding:20px;
+margin:15px 0;
+border-radius:15px;
+box-shadow:0 6px 15px rgba(0,0,0,0.3);
+transition:0.3s;
+backdrop-filter: blur(10px);
 }
 
-.card:hover {
-    transform:translateY(-5px);
+.card:hover{
+transform:translateY(-5px) scale(1.02);
+box-shadow:0 10px 25px rgba(0,0,0,0.5);
 }
 
 /* SKILLS */
-.skills-grid {
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-    gap:20px;
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+gap:20px;
 }
 
-.skill {
-    background: linear-gradient(135deg,#6B007B,#3049AD,#FEB5DA);
-    padding:20px;
-    border-radius:15px;
-    text-align:center;
-    font-weight:bold;
+.skill{
+background: linear-gradient(135deg,#6B007B,#3049AD,#FEB5DA);
+color:white;
+padding:20px;
+border-radius:15px;
+text-align:center;
+font-weight:bold;
+transition:0.3s;
+box-shadow:0 4px 12px rgba(0,0,0,0.3);
 }
 
-/* CONTACT FORM */
-.contact-box {
-    background: rgba(255,255,255,0.1);
-    padding:30px;
-    border-radius:20px;
+.skill:hover{
+transform:scale(1.05);
+box-shadow:0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* CONTACT SECTION */
+.contact-box{
+background: rgba(255,255,255,0.1);
+padding:30px;
+border-radius:20px;
+box-shadow:0 6px 15px rgba(0,0,0,0.3);
+backdrop-filter: blur(10px);
 }
 
 .contact-box input,
-.contact-box textarea {
-    width:100%;
-    padding:12px;
-    margin:10px 0;
-    border:none;
-    border-radius:10px;
-    outline:none;
+.contact-box textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:none;
+border-radius:10px;
+outline:none;
 }
 
-.contact-box button {
-    padding:12px 30px;
-    border:none;
-    border-radius:25px;
-    background: linear-gradient(135deg,#6B007B,#3049AD);
-    color:white;
-    font-weight:bold;
-    cursor:pointer;
-    transition:0.3s;
+.contact-box button{
+padding:12px 30px;
+border:none;
+border-radius:25px;
+background:linear-gradient(135deg,#6B007B,#3049AD);
+color:white;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
 }
 
-.contact-box button:hover {
-    transform:scale(1.1);
+.contact-box button:hover{
+transform:scale(1.1);
 }
 
 /* FOOTER */
-footer {
-    text-align:center;
-    padding:25px;
-    background:#094782;
+footer{
+text-align:center;
+padding:25px;
+background:#094782;
+color:white;
+font-weight:bold;
+box-shadow: 0 -5px 10px rgba(0,0,0,0.3);
 }
 </style>
 </head>
 
 <body>
 
+<!-- 🔹 PINNED NAME -->
+<div class="navbar">
+SANTHOSHINI THANNIRU
+</div>
+
 <!-- HEADER -->
 <header>
-    <img src="WhatsApp Image 2025-12-04 at 4.34.17 PM.jpeg" alt="Santhoshini">
-    <h1>SANTHOSHINI THANNIRU</h1>
-    <h3>Certificate in AI & Data Analytics</h3>
-    <p>Looking for a role in data analytics to support business decisions and contribute to company growth.</p>
+<img src="WhatsApp Image 2025-12-04 at 4.34.17 PM.jpeg" alt="Santhoshini Thanniru">
+<h1>SANTHOSHINI THANNIRU</h1>
+<h3>Certificate in AI & Data Analytics</h3>
+<p>Looking for a role in data analytics to support business decisions and contribute to company growth. Skilled in SQL, Pandas, Excel, and data visualization.</p>
 
-    <a href="https://linkedin.com/in/santhoshini-thanniru" class="btn">LinkedIn</a>
-    <a href="https://github.com/santhoshini2530" class="btn">GitHub</a>
-    <a href="#contact" class="btn">Contact</a>
+<a href="https://linkedin.com/in/santhoshini-thanniru" class="btn">LinkedIn</a>
+<a href="https://github.com/santhoshini2530" class="btn">GitHub</a>
+<a href="#contact" class="btn">Contact</a>
 
-    <br>
-    <a href="Santhoshini.thanniru.Formal TechM.pdf" class="download-btn" download>
-        Download Resume
-    </a>
+<a href="Santhoshini.thanniru.Formal TechM.pdf" class="download-btn" download>Download Resume</a>
 </header>
 
-<!-- CAREER -->
-<section>
+<!-- ALL YOUR ORIGINAL SECTIONS (UNCHANGED) -->
+
+<section id="career-objective">
 <h2>Career Objective</h2>
 <div class="card">
-Looking for a role in data analytics where I can apply my skills to support business decisions and contribute to company growth.
+Looking for a role in data analytics where I can apply my skills to support business decisions and contribute to company growth. Skilled in SQL, Pandas, Excel, and data visualization.
 </div>
 </section>
 
-<!-- CONTACT SECTION -->
+<section id="strengths">
+<h2>Strengths</h2>
+<div class="card">Adaptability</div>
+<div class="card">Attention to Detail</div>
+<div class="card">Teamwork</div>
+<div class="card">Effective Communication</div>
+</section>
+
+<section id="skills">
+<h2>Technical Skills</h2>
+<div class="skills-grid">
+<div class="skill">Python</div>
+<div class="skill">MySQL</div>
+<div class="skill">Excel</div>
+<div class="skill">Power BI</div>
+<div class="skill">Machine Learning</div>
+<div class="skill">SQL</div>
+<div class="skill">Pandas</div>
+<div class="skill">Data Visualization</div>
+</div>
+</section>
+
+<section id="education">
+<h2>Education</h2>
+<div class="card">2023-2025: M.Sc Computer Science - Bhavans Vivekananda Degree & PG College (83%)</div>
+<div class="card">2020-2023: B.Sc Statistics - Vasundara Women's Degree College (87%)</div>
+<div class="card">2018-2020: M.P.C - Sri Chaitanya Junior College (79%)</div>
+</section>
+
+<section id="projects">
+<h2>Projects & Achievements</h2>
+<div class="card">Certificate in AI Data Analytics - Tech Mahindra SMART Academy</div>
+<div class="card">
+Blood Bank Management System
+<ul>
+<li>Created documentation and structured workflows</li>
+<li>Enhanced attention to detail and data organization</li>
+</ul>
+</div>
+</section>
+
+<section id="hobbies">
+<h2>Hobbies</h2>
+<div class="card">Browsing AI & Data Analytics updates online</div>
+<div class="card">Watching movies</div>
+<div class="card">Cooking</div>
+<div class="card">Listening to music</div>
+</section>
+
+<!-- CONTACT SECTION ADDED AT END -->
 <section id="contact">
 <h2>Contact Me</h2>
-
 <div class="contact-box">
-
 <p><strong>Name:</strong> Santhoshini Thanniru</p>
 <p><strong>Phone:</strong> 9876543210</p>
 <p><strong>Email:</strong> santhoshini.thanniru@gmail.com</p>
 
 <h3>Send a Message</h3>
-
 <form>
 <input type="text" placeholder="Your Name" required>
 <input type="email" placeholder="Your Email" required>
 <textarea rows="5" placeholder="Your Message" required></textarea>
 <button type="submit">Send Message</button>
 </form>
-
 </div>
 </section>
 
