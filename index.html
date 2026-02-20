@@ -52,7 +52,12 @@ object-fit:cover;
 margin-bottom:20px;
 box-shadow:0 8px 20px rgba(227,0,102,0.2);
 }
-
+/ *.left-design */
+animation: floatLine 4s ease-in-out infinite;
+ @keyframes floatLine {
+    0%, 100% { transform: translateY(-50%); }
+    50% { transform: translateY(-55%); }
+}
 /* RIGHT SIDE BUTTONS */
 .side-buttons{
 position:absolute;
