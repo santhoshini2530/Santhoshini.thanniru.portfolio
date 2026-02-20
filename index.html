@@ -42,8 +42,8 @@ padding:60px 20px;
 }
 
 header img{
-width:170px;
-height:170px;
+width:180px;
+height:180px;
 border-radius:20px;
 border:4px solid #e30066;
 object-fit:cover;
@@ -51,7 +51,7 @@ margin-bottom:20px;
 }
 
 header h1{
-font-size:2.5em;
+font-size:2.6em;
 color:#e30066;
 margin-bottom:10px;
 }
@@ -61,11 +61,16 @@ color:#a0004d;
 margin-bottom:15px;
 }
 
+header p{
+max-width:600px;
+margin:auto;
+}
+
 /* BUTTONS */
 .btn{
 display:inline-block;
 padding:12px 28px;
-margin:8px;
+margin:6px;
 border-radius:30px;
 background:linear-gradient(135deg,#e30066,#e96088);
 color:white;
@@ -77,7 +82,6 @@ box-shadow:0 4px 10px rgba(227,0,102,0.2);
 
 .btn:hover{
 transform:scale(1.08);
-box-shadow:0 8px 18px rgba(227,0,102,0.35);
 }
 
 .download-btn{
@@ -96,7 +100,7 @@ transition:0.3s;
 transform:scale(1.08);
 }
 
-/* SECTION */
+/* SECTIONS */
 section{
 max-width:900px;
 margin:auto;
@@ -109,12 +113,37 @@ color:#e30066;
 margin-bottom:30px;
 }
 
-/* CONTACT BOX */
+/* CARDS */
+.card{
+background:white;
+padding:22px;
+margin:15px 0;
+border-radius:15px;
+box-shadow:0 6px 15px rgba(0,0,0,0.08);
+}
+
+/* SKILLS */
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+gap:20px;
+}
+
+.skill{
+background:linear-gradient(135deg,#f19eb1,#f9d2da);
+padding:18px;
+border-radius:15px;
+text-align:center;
+font-weight:600;
+color:#800040;
+}
+
+/* CONTACT */
 .contact-box{
 background:white;
-padding:35px;
+padding:30px;
 border-radius:20px;
-box-shadow:0 8px 20px rgba(0,0,0,0.08);
+box-shadow:0 6px 15px rgba(0,0,0,0.08);
 max-width:600px;
 margin:auto;
 }
@@ -123,7 +152,7 @@ margin:auto;
 .contact-box textarea{
 width:100%;
 padding:12px;
-margin:12px 0;
+margin:10px 0;
 border:1px solid #f19eb1;
 border-radius:10px;
 outline:none;
@@ -167,19 +196,81 @@ SANTHOSHINI THANNIRU
 <img src="WhatsApp Image 2025-12-04 at 4.34.17 PM.jpeg" alt="Santhoshini">
 <h1>SANTHOSHINI THANNIRU</h1>
 <h3>Certificate in AI & Data Analytics</h3>
-<p>Looking for a role in data analytics to support business decisions and contribute to company growth.</p>
+<p>Looking for a role in data analytics to support business decisions and contribute to company growth. Skilled in SQL, Pandas, Excel, and data visualization.</p>
 
 <a href="https://linkedin.com/in/santhoshini-thanniru" class="btn">LinkedIn</a>
 <a href="https://github.com/santhoshini2530" class="btn">GitHub</a>
+<a href="#contact" class="btn">Contact</a>
 
 <br>
-
 <a href="Santhoshini.thanniru.Formal TechM.pdf" class="download-btn" download>
 Download Resume
 </a>
 </header>
 
-<!-- CONTACT SECTION -->
+<!-- Career Objective -->
+<section>
+<h2>Career Objective</h2>
+<div class="card">
+Looking for a role in data analytics where I can apply my skills to support business decisions and contribute to company growth. Skilled in SQL, Pandas, Excel, and data visualization.
+</div>
+</section>
+
+<!-- Strengths -->
+<section>
+<h2>Strengths</h2>
+<div class="card">Adaptability</div>
+<div class="card">Attention to Detail</div>
+<div class="card">Teamwork</div>
+<div class="card">Effective Communication</div>
+</section>
+
+<!-- Technical Skills -->
+<section>
+<h2>Technical Skills</h2>
+<div class="skills-grid">
+<div class="skill">Python</div>
+<div class="skill">MySQL</div>
+<div class="skill">Excel</div>
+<div class="skill">Power BI</div>
+<div class="skill">Machine Learning</div>
+<div class="skill">SQL</div>
+<div class="skill">Pandas</div>
+<div class="skill">Data Visualization</div>
+</div>
+</section>
+
+<!-- Education -->
+<section>
+<h2>Education</h2>
+<div class="card">2023-2025: M.Sc Computer Science - Bhavans Vivekananda Degree & PG College (83%)</div>
+<div class="card">2020-2023: B.Sc Statistics - Vasundara Women's Degree College (87%)</div>
+<div class="card">2018-2020: M.P.C - Sri Chaitanya Junior College (79%)</div>
+</section>
+
+<!-- Projects -->
+<section>
+<h2>Projects & Achievements</h2>
+<div class="card">Certificate in AI Data Analytics - Tech Mahindra SMART Academy</div>
+<div class="card">
+<b>Blood Bank Management System</b>
+<ul>
+<li>Created documentation and structured workflows</li>
+<li>Enhanced attention to detail and data organization</li>
+</ul>
+</div>
+</section>
+
+<!-- Hobbies -->
+<section>
+<h2>Hobbies</h2>
+<div class="card">Browsing AI & Data Analytics updates online</div>
+<div class="card">Watching movies</div>
+<div class="card">Cooking</div>
+<div class="card">Listening to music</div>
+</section>
+
+<!-- CONTACT SECTION (SECURE) -->
 <section id="contact">
 <h2>Contact Me</h2>
 
@@ -188,18 +279,14 @@ Download Resume
 <p><strong>Email:</strong> santhoshini.thanniru30@gmail.com</p>
 
 <form action="https://formsubmit.co/santhoshini.thanniru30@gmail.com" method="POST">
-
-<!-- Required for first-time activation -->
 <input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_subject" value="New Portfolio Contact Message">
-<input type="hidden" name="_next" value="https://santhoshini2530.github.io/">
+<input type="hidden" name="_subject" value="New Portfolio Message">
 
 <input type="text" name="name" placeholder="Your Name" required>
 <input type="email" name="email" placeholder="Your Email" required>
 <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
 
 <button type="submit">Send Message</button>
-
 </form>
 
 </div>
