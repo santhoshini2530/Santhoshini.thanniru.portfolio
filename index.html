@@ -15,128 +15,117 @@ scroll-behavior:smooth;
 body{
 margin:0;
 font-family:'Montserrat', sans-serif;
-background: linear-gradient(135deg, #094782, #3049AD, #6B007B);
-color:#fff;
+background: linear-gradient(135deg,#fdeef0,#f9d2da,#f19eb1);
+color:#5a0035;
 }
 
-/* 🔹 STICKY NAME BAR */
+/* STICKY NAME BAR */
 .navbar{
 position:fixed;
 top:0;
 width:100%;
-background:linear-gradient(90deg,#6B007B,#3049AD);
+background:linear-gradient(90deg,#e30066,#e96088);
 padding:15px 0;
 text-align:center;
-font-weight:bold;
+font-weight:600;
 font-size:20px;
 color:white;
 z-index:1000;
-box-shadow:0 4px 10px rgba(0,0,0,0.3);
+box-shadow:0 4px 10px rgba(0,0,0,0.15);
 }
 
 /* HEADER */
 header{
 margin-top:70px;
-background: linear-gradient(135deg, #6B007B, #FEB5DA, #9A64A0);
-color:white;
 text-align:center;
 padding:80px 20px;
-box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 header img{
 width:180px;
 height:180px;
 border-radius:15px;
-border:4px solid white;
+border:4px solid #e30066;
 object-fit:cover;
 margin-bottom:20px;
 }
 
 header h1{
-font-size:3em;
-margin:10px 0;
-text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+font-size:2.8em;
+color:#e30066;
+margin-bottom:10px;
 }
 
 header h3{
-font-weight:400;
-margin-bottom:15px;
+color:#a0004d;
+margin-bottom:20px;
 }
 
 header p{
 max-width:600px;
 margin:auto;
-font-size:1.1em;
 }
 
 /* BUTTONS */
 .btn{
 display:inline-block;
 padding:12px 30px;
-margin:5px;
-border-radius:25px;
-background: linear-gradient(135deg,#6B007B,#9A64A0,#FEB5DA);
+margin:6px;
+border-radius:30px;
+background:linear-gradient(135deg,#e30066,#e96088);
 color:white;
-font-weight:bold;
-transition:0.3s;
+font-weight:600;
 text-decoration:none;
-box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+transition:0.3s;
+box-shadow:0 4px 10px rgba(227,0,102,0.2);
 }
 
 .btn:hover{
-transform:scale(1.1);
-box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+transform:scale(1.08);
+box-shadow:0 8px 18px rgba(227,0,102,0.35);
 }
 
-/* DOWNLOAD BUTTON */
 .download-btn{
 display:inline-block;
-margin:20px auto 0 auto;
-padding:15px 35px;
-background: linear-gradient(135deg,#3049AD,#6B007B,#FEB5DA);
+margin-top:20px;
+padding:14px 35px;
+border-radius:30px;
+background:linear-gradient(135deg,#e96088,#f19eb1);
 color:white;
-border-radius:25px;
-font-weight:bold;
+font-weight:600;
 text-decoration:none;
 transition:0.3s;
-box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
 .download-btn:hover{
-transform:scale(1.1);
-box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+transform:scale(1.08);
 }
 
 /* SECTIONS */
 section{
 max-width:900px;
 margin:auto;
-padding:60px 20px;
+padding:70px 20px;
 }
 
 section h2{
 text-align:center;
-color:#FEB5DA;
-margin-bottom:40px;
-font-size:2em;
-text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+color:#e30066;
+margin-bottom:35px;
 }
 
 /* CARDS */
 .card{
-background: rgba(255,255,255,0.1);
-padding:20px;
+background:white;
+padding:22px;
 margin:15px 0;
 border-radius:15px;
-box-shadow:0 6px 15px rgba(0,0,0,0.3);
+box-shadow:0 6px 15px rgba(0,0,0,0.08);
 transition:0.3s;
-backdrop-filter: blur(10px);
 }
 
 .card:hover{
-transform:translateY(-5px) scale(1.02);
-box-shadow:0 10px 25px rgba(0,0,0,0.5);
+transform:translateY(-5px);
 }
 
 /* SKILLS */
@@ -147,28 +136,20 @@ gap:20px;
 }
 
 .skill{
-background: linear-gradient(135deg,#6B007B,#3049AD,#FEB5DA);
-color:white;
-padding:20px;
+background:linear-gradient(135deg,#f19eb1,#f9d2da);
+padding:18px;
 border-radius:15px;
 text-align:center;
-font-weight:bold;
-transition:0.3s;
-box-shadow:0 4px 12px rgba(0,0,0,0.3);
+font-weight:600;
+color:#800040;
 }
 
-.skill:hover{
-transform:scale(1.05);
-box-shadow:0 10px 25px rgba(0,0,0,0.5);
-}
-
-/* CONTACT SECTION */
+/* CONTACT */
 .contact-box{
-background: rgba(255,255,255,0.1);
+background:white;
 padding:30px;
 border-radius:20px;
-box-shadow:0 6px 15px rgba(0,0,0,0.3);
-backdrop-filter: blur(10px);
+box-shadow:0 6px 15px rgba(0,0,0,0.08);
 }
 
 .contact-box input,
@@ -176,48 +157,46 @@ backdrop-filter: blur(10px);
 width:100%;
 padding:12px;
 margin:10px 0;
-border:none;
+border:1px solid #f19eb1;
 border-radius:10px;
 outline:none;
+font-family:inherit;
 }
 
 .contact-box button{
 padding:12px 30px;
 border:none;
-border-radius:25px;
-background:linear-gradient(135deg,#6B007B,#3049AD);
+border-radius:30px;
+background:linear-gradient(135deg,#e30066,#e96088);
 color:white;
-font-weight:bold;
+font-weight:600;
 cursor:pointer;
 transition:0.3s;
 }
 
 .contact-box button:hover{
-transform:scale(1.1);
+transform:scale(1.08);
 }
 
 /* FOOTER */
 footer{
 text-align:center;
 padding:25px;
-background:#094782;
+background:#e30066;
 color:white;
-font-weight:bold;
-box-shadow: 0 -5px 10px rgba(0,0,0,0.3);
+font-weight:600;
 }
 </style>
 </head>
 
 <body>
 
-<!-- 🔹 PINNED NAME -->
 <div class="navbar">
 SANTHOSHINI THANNIRU
 </div>
 
-<!-- HEADER -->
 <header>
-<img src="WhatsApp Image 2025-12-04 at 4.34.17 PM.jpeg" alt="Santhoshini Thanniru">
+<img src="WhatsApp Image 2025-12-04 at 4.34.17 PM.jpeg" alt="Santhoshini">
 <h1>SANTHOSHINI THANNIRU</h1>
 <h3>Certificate in AI & Data Analytics</h3>
 <p>Looking for a role in data analytics to support business decisions and contribute to company growth. Skilled in SQL, Pandas, Excel, and data visualization.</p>
@@ -226,19 +205,22 @@ SANTHOSHINI THANNIRU
 <a href="https://github.com/santhoshini2530" class="btn">GitHub</a>
 <a href="#contact" class="btn">Contact</a>
 
-<a href="Santhoshini.thanniru.Formal TechM.pdf" class="download-btn" download>Download Resume</a>
+<br>
+<a href="Santhoshini.thanniru.Formal TechM.pdf" class="download-btn" download>
+Download Resume
+</a>
 </header>
 
-<!-- ALL YOUR ORIGINAL SECTIONS (UNCHANGED) -->
+<!-- KEEPING ALL YOUR DATA SAME -->
 
-<section id="career-objective">
+<section>
 <h2>Career Objective</h2>
 <div class="card">
 Looking for a role in data analytics where I can apply my skills to support business decisions and contribute to company growth. Skilled in SQL, Pandas, Excel, and data visualization.
 </div>
 </section>
 
-<section id="strengths">
+<section>
 <h2>Strengths</h2>
 <div class="card">Adaptability</div>
 <div class="card">Attention to Detail</div>
@@ -246,7 +228,7 @@ Looking for a role in data analytics where I can apply my skills to support busi
 <div class="card">Effective Communication</div>
 </section>
 
-<section id="skills">
+<section>
 <h2>Technical Skills</h2>
 <div class="skills-grid">
 <div class="skill">Python</div>
@@ -260,14 +242,14 @@ Looking for a role in data analytics where I can apply my skills to support busi
 </div>
 </section>
 
-<section id="education">
+<section>
 <h2>Education</h2>
 <div class="card">2023-2025: M.Sc Computer Science - Bhavans Vivekananda Degree & PG College (83%)</div>
 <div class="card">2020-2023: B.Sc Statistics - Vasundara Women's Degree College (87%)</div>
 <div class="card">2018-2020: M.P.C - Sri Chaitanya Junior College (79%)</div>
 </section>
 
-<section id="projects">
+<section>
 <h2>Projects & Achievements</h2>
 <div class="card">Certificate in AI Data Analytics - Tech Mahindra SMART Academy</div>
 <div class="card">
@@ -279,7 +261,7 @@ Blood Bank Management System
 </div>
 </section>
 
-<section id="hobbies">
+<section>
 <h2>Hobbies</h2>
 <div class="card">Browsing AI & Data Analytics updates online</div>
 <div class="card">Watching movies</div>
@@ -287,21 +269,23 @@ Blood Bank Management System
 <div class="card">Listening to music</div>
 </section>
 
-<!-- CONTACT SECTION ADDED AT END -->
+<!-- CONTACT SECTION -->
 <section id="contact">
 <h2>Contact Me</h2>
 <div class="contact-box">
+
 <p><strong>Name:</strong> Santhoshini Thanniru</p>
-<p><strong>Phone:</strong> 9704300462</p>
-<p><strong>Email:</strong> santhoshini.thanniru30@gmail.com</p>
+<p><strong>Email:</strong> santhoshini.thanniru@gmail.com</p>
 
 <h3>Send a Message</h3>
-<form>
-<input type="text" placeholder="Your Name" required>
-<input type="email" placeholder="Your Email" required>
-<textarea rows="5" placeholder="Your Message" required></textarea>
+
+<form action="mailto:santhoshini.thanniru@gmail.com" method="post" enctype="text/plain">
+<input type="text" name="Name" placeholder="Your Name" required>
+<input type="email" name="Email" placeholder="Your Email" required>
+<textarea name="Message" rows="5" placeholder="Your Message" required></textarea>
 <button type="submit">Send Message</button>
 </form>
+
 </div>
 </section>
 
